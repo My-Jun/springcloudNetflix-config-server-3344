@@ -1,0 +1,15 @@
+server:
+  port: 3344
+#spring配置
+spring:
+  application:
+    name: springcloud-config-server
+  # 链接远程仓库 cloud-config cloud配置
+  cloud:    config:
+      # server 服务      server:
+        # 服务选择：svn，git        git:
+          # 是uri不是url，地址是https，不是ssh          uri: https://github.com/My-Jun/SpringCloud-Netflix-Kss-Config.git
+          # 默认的label为master
+          # Github现在master改为main, 修改 default-label 属性, 否则读不到
+          default-label: main
+
